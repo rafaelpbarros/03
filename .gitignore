@@ -1,0 +1,20 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+
+# Dados de origem e artefatos gerados localmente.
+/dados_extraidos/
+/data/bronze/*
+!/data/bronze/.gitkeep
+/reports/*
+!/reports/.gitkeep
+/vet.db
+/relatorio_*.csv
+/relatorio_consolidado.log
+
+# Arquivos temporarios e configuracoes locais de ferramentas.
+.pytest_cache/
+.mypy_cache/
+.coverage
+.vscode/settings.json
