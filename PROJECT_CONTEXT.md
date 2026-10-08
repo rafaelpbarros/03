@@ -24,6 +24,7 @@
 - Requisitos de negocio: documentos PDF em `consultoria/` descrevem BSC, indicadores, PDCA e declaracoes estrategicas.
 - Catalogo de metricas: `consultoria/CATALOGO_METRICAS_DW_METABASE.md` prioriza 38 metricas por relevancia e disponibilidade no ERP.
 - Coleta manual: `consultoria/COLETA_MANUAL_METRICAS_METABASE.md` lista informacoes ausentes no ERP e `sql/coleta_manual_metricas.sql` preserva seu historico no schema Gold.
+- Documentacao: `README.md` e `docs/` descrevem arquitetura, camadas, operacao, roteiro e decisoes; o repositorio Git local foi inicializado.
 
 ## Decisoes Registradas
 
@@ -36,6 +37,7 @@
 | 2026-10-08 | Usar os documentos em `consultoria/` como fonte inicial dos requisitos de dashboard. | Eles registram as perspectivas BSC, objetivos, metas e indicadores do hospital. | O catalogo Gold deve mapear cada indicador a formula, fonte e responsavel. | Confirmada |
 | 2026-10-08 | Priorizar metricas por impacto estrategico, economico, acionabilidade, pratica de mercado e viabilidade no ERP. | Evita construir primeiro indicadores de baixa utilidade ou que exigem nova captura. | O primeiro ciclo do dashboard deve conter somente metricas P0 com regra aprovada. | Pendente aprovacao |
 | 2026-10-08 | Registrar valores nao disponiveis no ERP em coleta manual versionada. | Evita inferir CSAT, RH, PDCA, baselines ou metas a partir de DBFs inadequados. | O dashboard pode combinar fatos automaticos e valores manuais rastreaveis. | Confirmada |
+| 2026-10-08 | Antecipar documentacao, organizacao de saidas e Git. | O projeto precisava de navegacao, operacao reproduzivel e historico seguro antes de modelar Gold. | Saidas geradas foram isoladas, dados sensiveis ignorados e um snapshot local foi criado. | Confirmada |
 
 ## Estado da Etapa Atual
 
@@ -55,6 +57,7 @@
 | 2026-10-08 | Documentos de consultoria. | Leitura dos PDFs BSC, indicadores/PDCA e missao/visao/valores. | Objetivos e metas identificados; formulas, linhas de base e fontes ainda precisam ser definidos. | `consultoria/` |
 | 2026-10-08 | Catalogo de metricas DW/Metabase. | Verificacao de 38 ranks unicos, prioridades P0/P1/P2 e rotulos de disponibilidade. | Aprovado tecnicamente; relevancia de negocio pendente de aprovacao. | `consultoria/CATALOGO_METRICAS_DW_METABASE.md` |
 | 2026-10-08 | Estrutura de coleta manual. | Execucao do SQL em transacao revertida no PostgreSQL local. | Schema, tabela e view validos; nenhum dado de exemplo inserido. | `sql/coleta_manual_metricas.sql` |
+| 2026-10-08 | Fundacao documental e de Git. | Compilacao dos pontos de entrada, validacao de links e verificacao de arquivos ignorados. | Documentacao aprovada; Git inicializado e commit `6c9b565` criado sem dados ou segredos. | `README.md`, `docs/` e `.gitignore` |
 
 ## Proximo Passo
 
